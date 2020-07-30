@@ -1,0 +1,33 @@
+button {
+  margin: 0 1.6rem;
+  padding: 1.2rem 1.8rem;
+  font-size: 1.4rem;
+  color: $light-color;
+  background: transparent;
+  border: 2px solid $blue-color;
+  border-radius: 2rem;
+  text-shadow: 0px 0px 5px $light-color;
+  box-shadow: 0px 0px 6px $blue-color, inset 0px 0px 4px $blue-color;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 500ms ease-out;
+  &:hover {
+    color: $dark-color;
+    background: $blue-color;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+ul,
+a {
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+}

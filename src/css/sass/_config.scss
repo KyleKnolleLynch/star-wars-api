@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Electrolize';
+  src: url('../fonts/Electrolize-Regular.woff2') format('woff2'),
+    url('../fonts/Electrolize-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+$dark-color: #222;
+$light-color: #dfdfdf;
+$blue-color: #1e96db;
+
+$electrolize: 'Electrolize', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: $electrolize;
+  font-size: 10px;
+}
+
+body {
+  background: $dark-color;
+  color: $blue-color;
+  text-align: center;
+}

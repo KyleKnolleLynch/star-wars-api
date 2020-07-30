@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+// import { ReactQueryDevtools } from 'react-query-devtools';
+import Navbar from './components/Navbar';
+import Planets from './components/Planets';
+import People from './components/People';
 
-function App() {
+import './css/main.css';
+
+const App = () => {
+  const [page, setPage] = useState('planets');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='container'>
+        <h1>Star Wars Info</h1>
+        <Navbar setPage={setPage} />
+        <main className='content'>
+          {page === 'planets' ? <Planets /> : <People />}
+        </main>
+      </div>
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+    </>
   );
-}
+};
 
 export default App;
